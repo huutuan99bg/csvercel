@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, world'
+    return {"success": True, 'test': 'ok'}
 
 
-@app.route('/test')
+@app.route('/api')
 def test():
-    return 'Test'
+    return {"success": True, 'message': 'API is working'}
 
 @app.route('/result')
 def result():
